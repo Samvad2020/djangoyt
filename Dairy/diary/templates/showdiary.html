@@ -1,0 +1,108 @@
+<html>
+<head>
+
+</head>
+<style>
+    	#menu{
+	height:70px;
+/*	width:1000px;*/
+	background: linear-gradient(#F8F594,  #D5D533);
+/*	margin:0 auto;*/
+	padding:7px 0;
+}
+
+ul{
+	list-style: none;
+}
+#menu ul li{
+	float:left;
+	padding: 0  30px;
+	height: 30px;
+	border-right: 1px solid #5d12e7;
+}
+#menu ul li:last-child{
+	border-right: none;
+}
+#menu ul li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size:17px;
+	color:#5d12e7;
+	line-height:30px;
+	transition: font-size 0.5s ease;/* speed fast than slow*/
+
+
+}
+.sidebar{
+	height:200px;
+	width: 300px;
+	border: 1px solid #BAF46F;
+	border-radius: 20px;
+	padding:10px 20px;
+
+}
+.sidebar h3{
+	font-size:30px;
+	color:purple;
+
+}
+#leftsidebar{
+	float:left;
+}
+#leftsidebar ol li{
+	padding-bottom: 6px;
+	padding-left:10px
+}
+
+#rightsidebar{
+	float:right;
+}
+#rightsidebar ol li{
+	padding-bottom: 20px;
+	padding-left:10px;
+	padding-right: 10px;
+}
+</style>
+<body>
+<center>
+<div id="menu">
+			<ul>
+				<li><a href="#" class="active">HOME</a></li>
+				<li><a href="#"><a href ="onlinetut.html">BOOKING</a> </a></li>
+				<li><a href="#"><a href="Private%20tutor.html">CHATS</a></a></li>
+				<li><a href="#"><a href="signup.html">FEEDS</a></a></li>
+				<li><a href="#"><a href="aboutus.html">NOTIFICATIONS</a></a></li>
+			</ul>
+			</div>
+	<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FKolkata&amp;src=YWFzdGhhamFpbjA3MjFAZ21haWwuY29t&amp;src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y2xhc3Nyb29tMTE2NTYzNTEzNDkyOTM5MTE3MDk1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%23009688&amp;color=%23202124&amp;showTitle=1&amp;title=Scheduling%20Calendar" style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+
+<div class="container">
+
+ <!--   <a class="menu" href="#">Add Memory</a>  -->
+</div>
+    <div id="leftsidebar"   class="sidebar">
+				<h4>Child Profile</h4>
+                            <p>Will show individual child profile
+</p>
+
+			</div>
+<div id="rightsidebar"  class="sidebar">
+    <h4>Day planner</h4>
+    *Activity
+    *Time
+    *Teacher
+
+</div>
+<center>
+	<button type="button" onclick="location.href='{% url 'add' %}'">Add student</button>
+
+	<button type="button" onclick="location.href='{% url 'create' %}'">Create Activity</button>
+	<button type="button" onclick="location.href='{% url 'name' %}'">Show Journal</button>
+</center>
+
+<a href="{% url 'logout'  %}">logout</a>
+</center>
+</body>
+</html>
+
+

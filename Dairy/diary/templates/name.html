@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+        div{
+        position : absolute;
+        right : 10px;
+        top : 5px
+        }
+    </style>
+    <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML =
+                    document.getElementById("user_input").value;
+    }
+  </script>
+
+</head>
+<body>
+<div>
+    <button type="button" onclick="location.href='{% url 'logout' %}'">Logout</button>
+</div>
+
+<br><br>
+
+<form method="POST">
+    <label><b>Enter name</b></label>
+    <input type="text" name="message" id="user_input">
+  </form>
+
+  <input type="submit" onclick="location.href='{% url 'check' %}'"><br/>
+<p><span id='display'></span></p>
+</body>
+</html>

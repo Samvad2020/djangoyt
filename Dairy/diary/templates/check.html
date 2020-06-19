@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+        div{
+        position : absolute;
+        right : 10px;
+        top : 5px
+        }
+    </style>
+    <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML =
+                    document.getElementById("user_input").value;
+    }
+  </script>
+
+</head>
+<body>
+<div>
+    <button type="button" onclick="location.href='{% url 'logout' %}'">Logout</button>
+</div>
+
+<br><br>
+
+<form>
+    <label><b>Enter name</b></label>
+    <input type="text" name="message" id="user_input">
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+
+Welcome !!
+  <p><span id='display'></span></p>
+ {% csrf_token %}
+<table border = "1" cellpadding = "5" cellspacing = "5" width = "500">
+    <caption><h2>Journal Report</h2></caption>
+{% for i,j in comp_list  %}
+
+         <tr>
+            <td>{{ i }} </td>
+            <td>{{ j }}</td>
+         </tr>
+     {% endfor %}
+ </table>
+</body>
+</html>
